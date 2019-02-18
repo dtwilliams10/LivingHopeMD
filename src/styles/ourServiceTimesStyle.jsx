@@ -1,6 +1,6 @@
 import { title } from "./material-kit-react.jsx";
 
-const whatWeBelieveStyle = {
+const ourServiceTimesStyle = {
   section: {
     padding: "40px 0",
     textAlign: "center"
@@ -15,9 +15,6 @@ const whatWeBelieveStyle = {
   description: {
     color: "#999"
   },
-  link: {
-    color: "#29bc30"
-  }
 };
 
-export default whatWeBelieveStyle;
+export default ourServiceTimesStyle;

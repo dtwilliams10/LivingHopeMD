@@ -11,6 +11,7 @@ import GridContainer from "../../components/Grid/GridContainer.jsx";
 import GridItem from "../../components/Grid/GridItem.jsx";
 import AboutUs from "./Sections/AboutUs.jsx"
 import WhatWeBelieve from './Sections/WhatWeBelieve.jsx';
+import OurServiceTimes from './Sections/OurServiceTimes.jsx'
 
 class Home extends Component {
 render() {
@@ -40,6 +41,7 @@ render() {
                 <div className={classes.container}>
                     <AboutUs />
                     <WhatWeBelieve />
+                    <OurServiceTimes />
                 </div>
             </div>
         </div>

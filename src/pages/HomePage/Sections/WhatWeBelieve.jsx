@@ -17,13 +17,13 @@ class WhatWeBelieve extends Component {
 
 We believe in the great commission and are endeavoring to share the Gospel of Jesus Christ with love, mercy and compassion.
 
-We believe there is only one God (<a href="http://www.biblegateway.com/passage/?search=Deuteronomy%206:4%20;&version=31;" target="_blank" rel="noopener noreferrer">Deuteronomy 6:4</a>). He is the creator of heaven and earth, and of all living beings. He has revealed Himself to humanity as the Father (Creator), as the Son (Savior), and as the Holy Ghost (indwelling Spirit).
+We believe there is only one God (<a className={classes.link} href="https://www.biblegateway.com/passage/?search=Deuteronomy%206:4&version=NIV" target="_blank" rel="noopener noreferrer">Deuteronomy 6:4</a>). He is the creator of heaven and earth, and of all living beings. He has revealed Himself to humanity as the Father (Creator), as the Son (Savior), and as the Holy Ghost (indwelling Spirit).
 
-We believe in water baptism by immersion in the Name of the Lord Jesus Christ for the remission of sin.  Through baptism we identify with the death, burial and resurrection of Jesus Christ (Romans 6:3-6; Colossians 2:11-14; Acts 2:38).
+We believe in water baptism by immersion in the Name of the Lord Jesus Christ for the remission of sin.  Through baptism we identify with the death, burial and resurrection of Jesus Christ (<a className={classes.link} href="https://www.biblegateway.com/passage/?search=Romans+6%3A3-6%3B+Colossians+2%3A11-14%3B+Acts+2%3A38;&version=NKJV" target="_blank" rel="noopener noreferrer">Romans 6:3-6; Colossians 2:11-14; Acts 2:38;</a>).
 
-We believe in the Baptism of the Holy Spirit with the initial sign of speaking in other tongues (Acts 2:4).
+We believe in the Baptism of the Holy Spirit with the initial sign of speaking in other tongues (<a className={classes.link} href="https://www.biblegateway.com/passage/?search=Acts+2%3A4&version=NKJV" target="_blank" rel="noopener noreferrer">Acts 2:4</a>).
 
-We believe in the manifestation of the gifts of the Holy Spirit. He ministers to His people through tongues, interpretation of tongues, prophecy; words of knowledge and wisdom, discerning of spirits, faith, working of miracles, healing, helps and government (Mark 16:15-18; Acts 5:16; 2 Corinthians 12:1-11).
+We believe in the manifestation of the gifts of the Holy Spirit. He ministers to His people through tongues, interpretation of tongues, prophecy; words of knowledge and wisdom, discerning of spirits, faith, working of miracles, healing, helps and government (<a className={classes.link} href="https://www.biblegateway.com/passage/?search=Mark+16%3A15-18%3B+Acts+5%3A16%3B+2+Corinthians+12%3A1-11;&version=NKJV" target="_blank" rel="noopener noreferrer">Mark 16:15-18; Acts 5:16; 2 Corinthians 12:1-11</a>).
                         </h4>
                     </GridItem>
                 </GridContainer>

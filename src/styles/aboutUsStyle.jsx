@@ -2,7 +2,7 @@ import { title } from "./material-kit-react.jsx";
 
 const aboutUsStyle = {
   section: {
-    padding: "70px 0",
+    padding: "40px 0",
     textAlign: "center"
   },
   title: {
