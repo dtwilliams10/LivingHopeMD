@@ -1,0 +1,15 @@
+version: "3"
+services:
+    client:
+        image: livinghopemd
+        restart: always
+        container_name: livinghopemd
+        ports: 
+            - "3002:3000"
+        environment:
+            LETSENCRYPT_EMAIL: david.williams110913@gmail.com
+            LETSENCRYPT_HOST: livinghopemd.dtwilliams10.com
+            VIRTUAL_HOST: livinghopemd.dtwillaims10.com
+        volumes:
+            - ./client:/client
+            - /client/node_modules

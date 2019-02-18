@@ -1,0 +1,23 @@
+stages:
+ - build
+ - deploy
+
+build:
+  image: docker:latest
+  stage: build
+  script:
+    - docker build -t livinghopemd .
+
+deploy:
+  image:
+    name: docker/compose:1.22.0
+    entrypoint: ["/bin/sh", "-c"]
+  stage: deploy
+  script:
+    - docker-compose down
+    - docker-compose -f "docker-compose.yml" up -d --build
+  environment:
+    name: staging
+    url: https://livinghopemd.dtwilliams10.com
+  only:
+    - develop
