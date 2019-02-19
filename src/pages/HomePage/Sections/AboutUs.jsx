@@ -11,7 +11,7 @@ class AboutUs extends Component {
             <div className={classes.section}>
                 <GridContainer justify="center">
                     <GridItem xs={12} sm={12} md={6}>
-                        <h2 className={classes.title}>Who are we?</h2>
+                        <h2 className={classes.title}>Who Are We?</h2>
                         <h4 className={classes.description}>
                         We are a family-oriented church that believes in the supernatural ministry of Jesus Christ that is ever present among His people. <br/>
                         We believe that every individual represents an opportunity for HOPE to be introduced and renewed in each life.

@@ -12,6 +12,7 @@ import GridItem from "../../components/Grid/GridItem.jsx";
 import AboutUs from "./Sections/AboutUs.jsx"
 import WhatWeBelieve from './Sections/WhatWeBelieve.jsx';
 import OurServiceTimes from './Sections/OurServiceTimes.jsx'
+import Footer from '../../components/Footer/Footer.jsx'
 
 class Home extends Component {
 render() {
@@ -44,6 +45,7 @@ render() {
                     <OurServiceTimes />
                 </div>
             </div>
+            <Footer/>
         </div>
         );
     }
