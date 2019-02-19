@@ -13,6 +13,7 @@ import AboutUs from "./Sections/AboutUs.jsx"
 import WhatWeBelieve from './Sections/WhatWeBelieve.jsx';
 import OurServiceTimes from './Sections/OurServiceTimes.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
+import HeaderLinks from '../../components/Header/HeaderLinks.jsx';
 
 class Home extends Component {
 render() {
@@ -22,6 +23,7 @@ render() {
         <Header
         color="transparent"
         brand="Living Hope Church"
+        rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
             height: 400,

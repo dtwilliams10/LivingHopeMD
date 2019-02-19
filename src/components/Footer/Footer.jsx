@@ -6,9 +6,6 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { List, ListItem, withStyles } from "@material-ui/core";
 
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-
 import footerStyle from "../../styles/footerStyle.jsx";
 
 function Footer({ ...props }) {
@@ -29,6 +26,7 @@ function Footer({ ...props }) {
             <ListItem className={classes.inlineBlock}>
               <p className={classes.right}>
                 Living Hope UPC <br/>
+                301-862-9805 <br/>
                 21650 Chancellors Run Road <br/>
                 Great Mills, MD 20634
               </p>
