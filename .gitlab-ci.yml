@@ -14,8 +14,8 @@ deploy:
     entrypoint: ["/bin/sh", "-c"]
   stage: deploy
   script:
-    - docker network disconnect livinghopemd_default proxy
-    - docker-compose down
+    #- docker network disconnect livinghopemd_default proxy
+    #- docker-compose down
     - docker-compose -f "docker-compose.yml" up -d --build
     - docker network connect livinghopemd_default proxy
   environment:
