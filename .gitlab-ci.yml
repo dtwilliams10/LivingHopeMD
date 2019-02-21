@@ -19,7 +19,7 @@ deploy:
     - docker-compose -f "docker-compose.yml" up -d --build
     - docker network connect livinghopemd_default proxy
   environment:
-    name: staging
-    url: https://livinghopemd.dtwilliams10.com
+    name: test
+    url: https://test.livinghopemd.dtwilliams10.com
   only:
     - develop
