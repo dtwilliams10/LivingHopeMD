@@ -1,0 +1,25 @@
+stages:
+ - build
+ - deploy
+
+build:
+  image: docker:latest
+  stage: build
+  script:
+    - docker build -t livinghopemd .
+
+deploy:
+  image:
+    name: docker/compose:1.22.0
+    entrypoint: ["/bin/sh", "-c"]
+  stage: deploy
+  script:
+    - docker network disconnect livinghopemd_default proxy
+    - docker-compose down
+    - docker-compose -f "docker-compose.yml" up -d --build
+    - docker network connect livinghopemd_default proxy
+  environment:
+    name: test
+    url: https://test.livinghopemd.dtwilliams10.com
+  only:
+    - develop
