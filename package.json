@@ -16,6 +16,9 @@
     "ts-pnp": "^1.0.1",
     "typescript": "^3.3.3333"
   },
+  "resolutions": {
+    "jest": "^24.3.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
