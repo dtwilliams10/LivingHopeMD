@@ -4,7 +4,11 @@ import classNames from "classnames";
 
 import withStyles from "@material-ui/core/styles/withStyles";
 
-import HeaderBar from './../../components/Header/HeaderBar.jsx';
+import Header from '../../components/Header/Header.jsx';
+import Parallax from '../../components/Parallax/Parallax.jsx';
+import GridContainer from '../../components/Grid/GridContainer.jsx';
+import GridItem from '../../components/Grid/GridItem.jsx';
+import HeaderLinks from '../../components/Header/HeaderLinks.jsx';
 import landingPageStyle from "../../styles/landingPage.jsx";
 import AboutUs from "./Sections/AboutUs.jsx"
 import WhatWeBelieve from './Sections/WhatWeBelieve.jsx';
@@ -13,10 +17,29 @@ import Footer from '../../components/Footer/Footer.jsx'
 
 class Home extends Component {
 render() {
-    const { classes } = this.props;
+    const { classes, ...rest } = this.props;
     return (
         <div>
-            <HeaderBar/>
+        <Header
+                color="transparent"
+                brand="Living Hope Church"
+                rightLinks={<HeaderLinks />}
+                fixed
+                changeColorOnScroll={{
+                    height: 400,
+                    color: "white"
+                }}
+                {...rest}
+                />
+            <Parallax filter image={require("../../assets/img/cover-image.webp")}>
+                <div className={classes.container}>
+                    <GridContainer>
+                        <GridItem xs={12} sm={12} md={6}>
+                            <h1 className={classes.title} >Welcome to Living Hope Church</h1>
+                        </GridItem>
+                    </GridContainer>
+                </div>
+            </Parallax>
             <div className={classNames(classes.main, classes.mainRaised)}>
                 <div className={classes.container}>
                     <AboutUs />
