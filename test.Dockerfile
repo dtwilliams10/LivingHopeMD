@@ -1,5 +1,5 @@
 # base image
-FROM node:8-alpine
+FROM node:current-alpine
 
 # set working directory
 WORKDIR /usr/src/app
@@ -16,4 +16,3 @@ COPY . .
 
 # start app
 CMD ["npm", "start"]
-
