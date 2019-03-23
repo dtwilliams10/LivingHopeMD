@@ -2,6 +2,7 @@
 FROM node:current-alpine as builder
 #RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
+ENV NODE_ENV=production
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 COPY package.json /usr/src/app/package.json
 RUN npm install --silent
