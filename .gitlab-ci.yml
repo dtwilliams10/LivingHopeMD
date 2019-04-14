@@ -49,5 +49,3 @@ prod deploy job:
   url: https://livinghopemd.dtwilliams10.com
  only:
   - branches@LHMS/LivingHopeMD
-
-
