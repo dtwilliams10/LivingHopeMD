@@ -16,6 +16,7 @@ test deploy job:
     entrypoint: ["/bin/sh", "-c"]
   stage: deploy
   script:
+    - docker network disconnect livinghopemd_default proxy
     - docker-compose -f "docker-compose.test.yml" down
     - docker-compose -f "docker-compose.test.yml" up -d --build
     - docker network connect livinghopemd_default proxy
