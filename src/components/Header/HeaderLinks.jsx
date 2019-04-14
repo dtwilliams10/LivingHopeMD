@@ -60,7 +60,7 @@ function HeaderLinks({ ...props }) {
           }}
           buttonIcon={PresentToAllTwoTone}
           dropdownList={[
-            <Link to="/" className={classes.dropdownLink}>
+            <Link to="/God" className={classes.dropdownLink}>
             Fellowship Groups
             </Link>,
             <Link to="/" className={classes.dropdownLink}>
