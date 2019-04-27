@@ -9,13 +9,11 @@ import Header from "../../components/Header/Header.jsx";
 import Parallax from "../../components/Parallax/Parallax.jsx";
 import GridContainer from "../../components/Grid/GridContainer.jsx";
 import GridItem from "../../components/Grid/GridItem.jsx";
-import AboutUs from "./Sections/AboutUs.jsx"
-import WhatWeBelieve from './Sections/WhatWeBelieve.jsx';
-import OurServiceTimes from './Sections/OurServiceTimes.jsx'
+import WhatWeBelieve from '../HomePage/Sections/WhatWeBelieve.jsx';
 import Footer from '../../components/Footer/Footer.jsx'
 import HeaderLinks from '../../components/Header/HeaderLinks.jsx';
 
-class Home extends Component {
+class God extends Component {
 render() {
     const { classes, ...rest } = this.props;
     return (
@@ -31,7 +29,7 @@ render() {
         }}
         {...rest}
         />
-            <Parallax filter image={require("../../assets/img/aaron-burden-759770-unsplash.jpg")}>
+            <Parallax filter image={require("../../assets/img/cover-small.jpg")}>
                 <div className={classes.container}>
                     <GridContainer>
                         <GridItem xs={12} sm={12} md={6}>
@@ -42,9 +40,7 @@ render() {
             </Parallax>
             <div className={classNames(classes.main, classes.mainRaised)}>
                 <div>
-                    <AboutUs />
                     <WhatWeBelieve />
-                    <OurServiceTimes />
                 </div>
             </div>
             <Footer/>
@@ -53,4 +49,4 @@ render() {
     }
 }
 
-export default withStyles(landingPageStyle)(Home);
+export default withStyles(landingPageStyle)(God);

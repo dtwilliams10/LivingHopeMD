@@ -41,7 +41,7 @@ prod deploy job:
  stage: deploy
  script:
   - docker network disconnect livinghopemd_default proxy
-  - docker-compose -f "docker-compose.test.yml" down
+  - docker-compose -f "docker-compose.prod.yml" down
   - docker-compose -f "docker-compose.prod.yml" up -d --build
   - docker network connect livinghopemd_default proxy
  environment:
@@ -49,5 +49,3 @@ prod deploy job:
   url: https://livinghopemd.dtwilliams10.com
  only:
   - branches@LHMS/LivingHopeMD
-
-
