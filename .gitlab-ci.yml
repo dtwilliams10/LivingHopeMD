@@ -2,24 +2,50 @@ stages:
  - build
  - deploy
 
-build:
-  image: docker:latest
+test build job:
   stage: build
+  image: docker:latest
+  only:
+    - branches@dtwilliams10/LivingHopeMD
   script:
-    - docker build -t livinghopemd .
+    - docker build -f test.Dockerfile -t livinghopemd .
 
-deploy:
+test deploy job:
   image:
     name: docker/compose:1.22.0
     entrypoint: ["/bin/sh", "-c"]
   stage: deploy
   script:
     - docker network disconnect livinghopemd_default proxy
-    - docker-compose down
-    - docker-compose -f "docker-compose.yml" up -d --build
+    - docker-compose -f "docker-compose.test.yml" down
+    - docker-compose -f "docker-compose.test.yml" up -d --build
     - docker network connect livinghopemd_default proxy
   environment:
     name: test
     url: https://test.livinghopemd.dtwilliams10.com
   only:
-    - develop
+    - branches@dtwilliams10/LivingHopeMD
+
+prod build job:
+  stage: build
+  image: docker:latest
+  only:
+    - branches@LHMS/LivingHopeMD
+  script:
+    - docker build -f prod.Dockerfile -t livinghopemd .
+
+prod deploy job:
+ image:
+  name: docker/compose:1.22.0
+  entrypoint: ["/bin/sh", "-c"]
+ stage: deploy
+ script:
+  - docker network disconnect livinghopemd_default proxy
+  - docker-compose -f "docker-compose.prod.yml" down
+  - docker-compose -f "docker-compose.prod.yml" up -d --build
+  - docker network connect livinghopemd_default proxy
+ environment:
+  name: staging
+  url: https://livinghopemd.dtwilliams10.com
+ only:
+  - branches@LHMS/LivingHopeMD

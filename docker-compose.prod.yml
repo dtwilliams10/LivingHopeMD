@@ -5,11 +5,11 @@ services:
         restart: always
         container_name: livinghopemd
         ports:
-            - "3000:3000"
+            - "4000:80"
         environment:
             LETSENCRYPT_EMAIL: david.williams110913@gmail.com
-            LETSENCRYPT_HOST: test.livinghopemd.dtwilliams10.com
-            VIRTUAL_HOST: test.livinghopemd.dtwilliams10.com
+            LETSENCRYPT_HOST: livinghopemd.dtwilliams10.com
+            VIRTUAL_HOST: livinghopemd.dtwilliams10.com
         volumes:
             - ./client:/client
             - /client/node_modules
