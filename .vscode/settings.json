@@ -1,3 +1,4 @@
 {
-    "gitlab.instanceUrl": "https://gitlab.dtwilliams10.com"
+    "gitlab.instanceUrl": "https://gitlab.dtwilliams10.com",
+    "gitlab.showPipelineUpdateNotifications": true
 }
