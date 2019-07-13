@@ -1,5 +1,5 @@
 # base image
-FROM node:latest
+FROM node:current
 
 # set working directory
 WORKDIR /usr/src/app
@@ -9,10 +9,10 @@ WORKDIR /usr/src/app
 
 # install and cache app dependencies
 COPY package*.json ./
-RUN yarn --silent
-RUN yarn add react-scripts -g --silent
+RUN npm install --silent
+RUN npm install react-scripts -g --silent
 
 COPY . .
 
 # start app
-CMD ["yarn", "start"]
+CMD ["npm", "start"]

@@ -5,6 +5,10 @@
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.0.8",
+    "@types/react": "^16.8.20",
+    "@types/react-dom": "^16.8.4",
     "classnames": "^2.2.6",
     "commitizen": "^3.1.1",
     "env-cmd": "^8.0.2",
@@ -13,9 +17,9 @@
     "react-dom": "^16.8.6",
     "react-iframe": "^1.8.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "3.0.1",
     "ts-pnp": "^1.1.2",
-    "typescript": "^3.4.5"
+    "typescript": "^3.5.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -33,9 +37,6 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "resolutions": {
-    "jest": "^24.3.0"
-  },
   "devDependencies": {
     "cz-conventional-changelog": "2.1.0",
     "eslint": "^5.16.0",
