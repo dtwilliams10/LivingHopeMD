@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from './pages/HomePage/Home';
 import God from './pages/God/God';
-import { Route, Switch} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import './App.css';
 
 export const App = () => {
