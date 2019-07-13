@@ -7,6 +7,8 @@ test build job:
   image: docker:latest
   only:
     - branches@dtwilliams10/LivingHopeMD
+  tags:
+    - develop
   script:
     - docker build -f test.Dockerfile -t livinghopemd .
 
@@ -25,12 +27,16 @@ test deploy job:
     url: https://test.livinghopemd.dtwilliams10.com
   only:
     - branches@dtwilliams10/LivingHopeMD
+  tags:
+    - develop
 
 prod build job:
   stage: build
   image: docker:latest
   only:
     - branches@LHMS/LivingHopeMD
+  tags:
+    - production
   script:
     - docker build -f prod.Dockerfile -t livinghopemd .
 
@@ -49,3 +55,5 @@ prod deploy job:
   url: https://livinghopemd.dtwilliams10.com
  only:
   - branches@LHMS/LivingHopeMD
+ tags:
+  - production
